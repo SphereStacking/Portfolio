@@ -18,5 +18,8 @@
     "lint": "eslint docs",
     "lint:debug": "eslint docs --debug",
     "lint:fix": "eslint docs --fix"
+  },
+  "dependencies": {
+    "@formkit/tempo": "^0.1.2"
   }
 }
