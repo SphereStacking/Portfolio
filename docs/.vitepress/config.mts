@@ -36,6 +36,10 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ES3VF8F3QE');`
+    ],
+    [
+      'script',
+      { async: '', src: 'https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js' }
     ]
   ]
 })
