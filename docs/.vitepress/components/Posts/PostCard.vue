@@ -26,7 +26,7 @@ const date = computed(() => format(parse(props.data.frontmatter.date), "YYYY年M
   <div class="group flex flex-row overflow-hidden rounded-xl border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-teal-200">
     <Thumbnail
       :thumbnail="props.data.frontmatter.thumbnail"
-      class="w-40"
+      class="w-40 bg-gray-100/10"
     />
     <div class="flex w-full flex-col px-6 py-4">
       <span class="flex items-center gap-1 text-xs">

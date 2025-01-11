@@ -15,7 +15,7 @@ const props = defineProps<Props>()
 
 </script>
 <template>
-  <div class=" bg-gray-100/5">
+  <div>
     <ThumbnailIcon
       v-if="props.thumbnail.type === 'icons'"
       :options="props.thumbnail.options"

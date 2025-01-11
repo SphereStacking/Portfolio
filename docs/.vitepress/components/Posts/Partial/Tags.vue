@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Tag from '../../Tag.vue'
 type Props = {
   tags: string[]
 }
@@ -8,10 +9,10 @@ const props = defineProps<Props>()
 
 <template>
   <div class="flex flex-wrap gap-1">
-    <span
+    <Tag
       v-for="tag in props.tags"
       :key="tag"
-      class="rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-700"
-    >#{{ tag }}</span>
+      :tag="tag"
+    />
   </div>
 </template>
