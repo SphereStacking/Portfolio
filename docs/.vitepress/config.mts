@@ -23,6 +23,20 @@ export default defineConfig({
       { icon: 'x', link: 'https://x.com/SphereStacking' },
       { icon: 'gmail', link: 'mailto:sphere.stacking@gmail.com' },
     ]
-  }
+  },
+  head: [
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-ES3VF8F3QE' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ES3VF8F3QE');`
+    ]
+  ]
 })
 
