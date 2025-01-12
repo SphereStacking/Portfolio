@@ -1,12 +1,11 @@
 <script setup>
-import { data as contents } from './posts.data.mts'
-import PostCard from './PostCard.vue'
+import { data as contents } from '@/posts.data.mts'
 import { computed } from 'vue'
 
 const groupedByYearArray = computed(() => {
   const groupedByYearArray = Object.values(
     contents.reduce((acc, page) => {
-      const year = new Date(page.frontmatter.date).getFullYear()
+      const year = new Date(page.frontmatter.created_at).getFullYear()
       if (!acc[year]) {
           acc[year] = { year, contents: [] }
         }

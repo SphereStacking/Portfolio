@@ -6,7 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import "../custom.css";
 
-import PostTitle from '../components/Posts/PostTitle.vue'
+import PostTitle from '@/components/Page/outputs/Partial/PostTitle.vue'
 
 export default {
   extends: DefaultTheme,

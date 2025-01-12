@@ -1,11 +1,24 @@
 <script setup>
-import { computed } from 'vue'
 import { format, parse } from "@formkit/tempo"
 import { useData } from 'vitepress'
-import Thumbnail from './Partial/Thumbnail.vue'
-import Tag from '../Tag.vue'
 const { frontmatter } = useData()
-const date = computed(() => format(parse(frontmatter.value.date), "YYYY年MM月DD日"));
+const created = computed(() => {
+  return frontmatter.value.created_at 
+    ? format(parse(frontmatter.value.created_at), "YYYY/MM/DD") 
+    : ""
+})
+
+const updated = computed(() => {
+  return frontmatter.value.updated_at 
+    ? format(parse(frontmatter.value.updated_at), "YYYY/MM/DD") 
+    : ""
+})
+
+const showUpdated = computed(() => {
+  const updatedAt = frontmatter.value.updated_at
+  const createdAt = frontmatter.value.created_at
+  return !!updatedAt && updatedAt !== createdAt
+})
 </script>
 
 <template>
@@ -22,7 +35,13 @@ const date = computed(() => format(parse(frontmatter.value.date), "YYYY年MM月D
         icon="mdi:calendar"
         class="text-lg"
       />
-      <span>{{ date }}</span>
+      <span>{{ created }}</span>
+      <iconify-icon
+        v-if="showUpdated"
+        icon="mdi:update"
+        class="text-lg"
+      />
+      <span v-if="showUpdated">{{ updated }}</span>
     </p>
     <p class="flex items-center gap-2">
       <Tag

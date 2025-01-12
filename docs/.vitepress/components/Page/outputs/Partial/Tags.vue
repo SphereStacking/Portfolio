@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Tag from '../../Tag.vue'
 type Props = {
   tags: string[]
 }

@@ -12,7 +12,7 @@ const props = defineProps<Props>()
   >
     <iconify-icon
       icon="mdi:tag"
-      class="text-sm"
+      class="text-xs mt-0.5"
     />
     <span>{{ props.tag }}</span>
   </span>
