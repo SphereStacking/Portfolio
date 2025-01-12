@@ -5,7 +5,7 @@ export default createContentLoader('outputs/**/*.md', {
     render: false,     // レンダリングされた全ページ HTML を含めますか?
     excerpt: false,    // 抜粋を含めますか？
   transform(rawData:ContentData[]) {
-    const excludedUrls = ["/outputs/template.html", "/outputs/"]
+    const excludedUrls = ["/outputs/Template/", "/outputs/"]
     // 除外URLでフィルタリング
     const filteredData = rawData
       .filter(page => !excludedUrls.includes(page.url))

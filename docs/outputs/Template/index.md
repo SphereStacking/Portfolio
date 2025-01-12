@@ -1,7 +1,8 @@
 ---
 title: "sample"
 description: "sample"
-date: 2025-01-1T09:00:00+09:00
+created_at: 2025-01-1T09:00:00+09:00
+updated_at: 2025-01-1T09:00:00+09:00
 tags: ["hoge", "fuga", "piyo"]
 outline: deep
 next: false
