@@ -3,7 +3,7 @@ import { ref, onMounted, watch, computed } from 'vue'
 import { useDark } from '@vueuse/core'
 
 interface Props {
-  xPostId?: string;
+  Id?: string;
   xPostUrl?: string;
   conversation?: 'all' | 'none';
   cards?: 'visible' | 'hidden';
@@ -50,16 +50,16 @@ const clearDom = () => {
 }
 
 const getTweetParams = () => {
-  const { xPostId: rawTweetId, xPostUrl, ...xPostOptions } = props;
-  let xPostId = rawTweetId;
+  const { Id: rawId, xPostUrl, ...xPostOptions } = props;
+  let xPostId = rawId;
 
-  if (rawTweetId && xPostUrl) {
+  if (rawId && xPostUrl) {
     throw new Error("xPost-id と xPost-url の両方を指定することはできません。");
   }
   if (!xPostId && !xPostUrl) {
     throw new Error("xPost-id または xPost-url のいずれかを指定する必要があります。");
   }
-  if (rawTweetId && !isValidTweetId(rawTweetId)) {
+  if (rawId && !isValidTweetId(rawId)) {
     throw new Error("ツイート ID が無効です。有効な数値のツイート ID を入力してください。");
   }
 
