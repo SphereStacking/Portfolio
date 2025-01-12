@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import tailwind from "eslint-plugin-tailwindcss";
+import autoImportConfig from './.eslintrc-auto-import.json';
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -24,6 +25,7 @@ export default [
       globals: globals.browser,
     },
   },
+  autoImportConfig,
 ];
 
 
