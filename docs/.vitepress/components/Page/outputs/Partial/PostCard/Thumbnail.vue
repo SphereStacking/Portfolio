@@ -19,10 +19,12 @@ const props = defineProps<Props>()
     <ThumbnailIcon
       v-if="props.thumbnail.type === 'icons'"
       :options="props.thumbnail.options"
+      v-bind="$attrs"
     />
     <ThumbnailImage
       v-else-if="props.thumbnail.type === 'image'"
       :options="props.thumbnail.options"
+      v-bind="$attrs"
     />
   </div>
 </template>

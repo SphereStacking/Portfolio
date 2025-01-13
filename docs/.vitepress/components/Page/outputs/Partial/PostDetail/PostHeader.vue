@@ -25,11 +25,14 @@ const showUpdated = computed(() => {
   <div class="flex flex-col gap-3">
     <Thumbnail
       :thumbnail="frontmatter.thumbnail"
-      class="my-10"
+      class="my-10 gap-5"
     />
     <h1 class="mt-2 text-4xl font-bold">
       {{ frontmatter.title }}
     </h1>
+    <div class="flex items-center gap-1 text-xs text-gray-500/70">
+      {{ frontmatter.description }}
+    </div>
     <p class="flex items-center gap-1 text-sm text-gray-500/70">
       <iconify-icon
         icon="mdi:calendar"

@@ -12,7 +12,7 @@ type Props = {
 }
 const iconLengthClassMap = {
     1: { item: 'text-7xl', container: '' },
-    2: { item: 'text-6xl', container: 'flex-wrap gap-2 py-6' },
+    2: { item: 'text-6xl', container: 'flex-wrap gap-4 py-6' },
     3: { item: 'text-5xl', container: 'flex-wrap gap-2 p-2 py-8' },
     4: { item: 'text-5xl', container: 'flex-wrap gap-2 p-2 py-8' },
 }

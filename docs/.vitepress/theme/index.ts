@@ -6,7 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import "../custom.css";
 
-import PostTitle from '@/components/Page/outputs/Partial/PostTitle.vue'
+import PostHeader from '@/components/Page/outputs/Partial/PostDetail/PostHeader.vue'
 
 export default {
   extends: DefaultTheme,
@@ -15,7 +15,7 @@ export default {
       'doc-before': () => {
         const { page } = useData()
         if (page.value.relativePath.match(/^outputs\/(?!index.md)/)) {
-          return h(PostTitle)
+          return h(PostHeader)
         }
       },
     })

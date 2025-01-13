@@ -2,7 +2,7 @@
 import { format, parse } from "@formkit/tempo"
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import Thumbnail, { type ThumbnailProps  } from '@/components/Page/outputs/Partial/Thumbnail.vue'
+import Thumbnail, { type ThumbnailProps  } from '@/components/Page/outputs/Partial/PostCard/Thumbnail.vue'
 
 type Props = {
   data: {
