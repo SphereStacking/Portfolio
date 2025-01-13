@@ -1,6 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 
+// プラグインのインポート
+import { SitemapPlugin } from './plugins/sitemap'
+import { RSSPlugin } from './plugins/rss'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
@@ -44,7 +47,11 @@ export default defineConfig({
     [
       'script',
       { async: '', src: 'https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js' }
-    ]
+    ],
+    [
+      'link',
+      { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/rss.xml' }
+    ],
   ],
   vite: {
     plugins: [
@@ -85,6 +92,19 @@ export default defineConfig({
         // マークダウンで使用されているコンポーネントを自動インポートして登録
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.mdx?/],
       }),
+      SitemapPlugin({
+        hostname: 'https://spherestacking.github.io/Portfolio/'
+      }),
+      // RSSPlugin({
+      //   targetPath: 'outputs',
+      //   hostname: 'https://spherestacking.github.io/Portfolio/', // 必要に応じてホスト名を変更
+      //   title: "Sphere Stacking",
+      //   description: "Sphere Stacking",
+      //   id: "https://spherestacking.github.io/Portfolio/",
+      //   link: "https://spherestacking.github.io/Portfolio/",
+      //   language: "ja",
+      //   favicon: "https://spherestacking.github.io/Portfolio/favicon.ico",
+      // })
     ],
     resolve: {
       alias: {
