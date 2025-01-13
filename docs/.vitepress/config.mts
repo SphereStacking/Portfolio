@@ -10,7 +10,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/Portfolio/',
-  title: "Portfolio",
+  title: "SphereStacking.com",
   description: "SphereStackingのポートフォリオサイトです。",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
