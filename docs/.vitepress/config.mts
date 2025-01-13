@@ -29,7 +29,11 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/SphereStacking' },
       { icon: 'x', link: 'https://x.com/SphereStacking' },
       { icon: 'gmail', link: 'mailto:sphere.stacking@gmail.com' },
-    ]
+    ],
+    
+    footer: {
+      copyright: 'Copyright © 2025-present <a href="https://github.com/SphereStacking">SphereStacking</a>'
+    }
   },
   head: [
     [
