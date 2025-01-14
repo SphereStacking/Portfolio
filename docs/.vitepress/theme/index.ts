@@ -7,6 +7,7 @@ import './style.css'
 import "../custom.css";
 
 import PostHeader from '@/components/Page/outputs/Partial/PostDetail/PostHeader.vue'
+import Comments from '@/components/giscus/comments.vue'
 
 export default {
   extends: DefaultTheme,
@@ -18,6 +19,12 @@ export default {
           return h(PostHeader)
         }
       },
+      'doc-after': () => {
+        const { page } = useData()
+        if (page.value.relativePath.match(/^outputs\/(?!index.md)/)) {
+          return h(Comments)
+        }
+      }
     })
   },
   enhanceApp({ app, router, siteData }) {
