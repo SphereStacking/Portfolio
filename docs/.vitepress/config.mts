@@ -34,6 +34,11 @@ export default defineConfig({
 
     footer: {
       copyright: 'Copyright © 2025-present <a href="https://github.com/SphereStacking">SphereStacking</a>'
+    },
+
+    // 検索機能 https://vitepress.dev/reference/default-theme-search
+    search: {
+      provider: 'local'
     }
   },
   head: [
