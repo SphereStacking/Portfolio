@@ -1,5 +1,6 @@
 ---
 title: スキル
+editLink: false
 ---
 
 <script setup>

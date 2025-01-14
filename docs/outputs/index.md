@@ -3,6 +3,7 @@ theme: page
 title: Posts
 next: false
 prev: false
+editLink: false
 ---
 
 # Posts

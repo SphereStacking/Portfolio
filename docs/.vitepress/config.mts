@@ -39,7 +39,12 @@ export default defineConfig({
     // 検索機能 https://vitepress.dev/reference/default-theme-search
     search: {
       provider: 'local'
-    }
+    },
+
+    // 編集リンク https://vitepress.dev/reference/default-theme-edit-link
+    editLink: {
+      pattern: 'https://github.com/SphereStacking/Portfolio/edit/main/docs/:path'
+    },
   },
   head: [
     [
